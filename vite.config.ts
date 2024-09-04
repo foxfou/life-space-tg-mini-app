@@ -6,6 +6,7 @@ const BASE_PATH = process.env.BASE_PATH
 
 export default defineConfig({
   base: BASE_PATH ? `${BASE_PATH}/` : '/',
+  exclude: /node_modules/,
   plugins: [
     remix({
       ssr: false,
