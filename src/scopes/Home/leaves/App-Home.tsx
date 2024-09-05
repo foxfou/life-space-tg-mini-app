@@ -16,10 +16,10 @@ export const Home = () => {
         //
         // </>
 
-        <div className="flex flex-col w-full min-h-screen items-end">
+        <div className="flex flex-col md:flex-row w-full min-h-screen">
 
             <div className="px-6 py-6">
-                <img src="/home_page_img.svg" alt="Startscreen image"></img>
+                <img src="./images/home_page_img.svg" alt="Startscreen image"></img>
             </div>
 
             <header className="px-4 pb-6 text-center">
@@ -34,12 +34,14 @@ export const Home = () => {
                 </div>
             </header>
 
-            <main className="container flex my-6">
-                <Button className="mx-auto" size="lg">
+            <main className="flex justify-center mx-auto">
+                <Button className="" size="lg">
                     <NavLink to="/search">
                         Найти жилье
                     </NavLink>
                 </Button>
+
+                <NavLink to="/user">User</NavLink>
             </main>
 
         </div>
