@@ -1,6 +1,7 @@
 import { vitePlugin as remix } from "@remix-run/dev";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
+import * as fs from 'node:fs'
 
 const BASE_PATH = process.env.BASE_PATH
 
@@ -21,4 +22,16 @@ export default defineConfig({
     }),
     tsconfigPaths(),
   ],
+  server: {
+    port: 443,
+    host: "0.0.0.0",
+    hmr: {
+        host: 'tg-mini-app.local',
+        port: 443,
+    },
+    https: {
+      key: fs.readFileSync('./.cert/localhost-key.pem'),
+      cert: fs.readFileSync('./.cert/localhost.pem'),
+    },
+  },
 });

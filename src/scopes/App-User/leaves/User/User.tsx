@@ -18,11 +18,17 @@ export const User = () => {
                     <h1>Welcome {user?.username}</h1>
                     User data:
                     <pre>{JSON.stringify(user, null, 2)}</pre>
-                    Eniter Web App data:
+                    App data:
                     <pre>{JSON.stringify(webApp, null, 2)}</pre>
                 </div>
             ) : (
-                <div>Make sure web app is opened from telegram client</div>
+                <div className="container px-4 py-2 flex flex-col gap-y-2">
+
+                    Данное приложение открывается только через Telegram Mini App
+
+                    <a href="https://t.me/lifespacerentbot" className="text-blue-700">https://t.me/lifespacerentbot</a>
+
+                </div>
             )}
         </div>
     )

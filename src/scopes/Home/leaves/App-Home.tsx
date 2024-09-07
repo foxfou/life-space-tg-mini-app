@@ -1,21 +1,9 @@
 import {NavLink} from 'react-router-dom'
 import {Button} from '@/components/common/button'
 
-
 export const Home = () => {
+    // const WebApp = window.Telegram.WebApp
     return (
-        // <>
-        //
-        //     <div className="text-2xl">Hi Home page</div>
-        //
-        //     <Button asChild>
-        //         <NavLink to="/search" className="block">Go to Search</NavLink>
-        //     </Button>
-        //
-        //     <NavLink to="/user" className="block">Go to User</NavLink>
-        //
-        // </>
-
         <div className="flex flex-col md:flex-row w-full min-h-screen">
 
             <div className="px-6 py-6">
@@ -41,7 +29,6 @@ export const Home = () => {
                     </NavLink>
                 </Button>
 
-                <NavLink to="/user">User</NavLink>
             </main>
 
         </div>
