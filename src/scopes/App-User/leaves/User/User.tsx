@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react'
+import {useTelegram} from '@/scopes/App/contexts/appContext'
 
 export type UserData = {
   id: number
@@ -10,35 +10,20 @@ export type UserData = {
 }
 
 export const User = () => {
-    const WebApp = window.Telegram.WebApp
-    const [userData, setUserData] = useState<UserData | null>(null)
-    useEffect(() => {
-        if (WebApp.initDataUnsafe.user)  {
-            setUserData(WebApp.initDataUnsafe.user as UserData)
-        }
-    }, [])
-    return(
-        <>
-            {userData ? (
+    const { user, webApp } = useTelegram()
+    return (
+        <div>
+            {user ? (
                 <div>
-
-                    <h1 className="text-2xl font-bold mb-4">User Data</h1>
-
-                    <ul>
-                        <li>ID: {userData.id}</li>
-                        <li>First Name: {userData.first_name}</li>
-                        <li>Last Name: {userData.last_name || 'N/A'}</li>
-                        <li>Username: {userData.username || 'N/A'}</li>
-                        <li>Language Code: {userData.language_code}</li>
-                        <li>Is Premium: {userData.is_premium ? 'Yes' : 'No'}</li>
-                    </ul>
-
+                    <h1>Welcome {user?.username}</h1>
+                    User data:
+                    <pre>{JSON.stringify(user, null, 2)}</pre>
+                    Eniter Web App data:
+                    <pre>{JSON.stringify(webApp, null, 2)}</pre>
                 </div>
             ) : (
-                <div>
-                    Loading...
-                </div>
+                <div>Make sure web app is opened from telegram client</div>
             )}
-        </>
+        </div>
     )
 }
