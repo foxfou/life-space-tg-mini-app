@@ -2,7 +2,7 @@ import {NavLink} from 'react-router-dom'
 import {Button} from '@/components/common/button'
 
 export const Home = () => {
-    // const WebApp = window.Telegram.WebApp
+
     return (
         <div className="flex flex-col md:flex-row w-full min-h-screen">
 
