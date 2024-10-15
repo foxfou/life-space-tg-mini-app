@@ -17,7 +17,7 @@ export const Offer = (props: OffersProps) => {
                     <OfferPreviewCard item={item} />
                 </button>
             </DialogTrigger>
-            <DialogContent className="overflow-y-scroll max-h-screen">
+            <DialogContent className="overflow-y-scroll h-full w-full">
                 <OfferDetailCard item={item} />
             </DialogContent>
         </Dialog>
