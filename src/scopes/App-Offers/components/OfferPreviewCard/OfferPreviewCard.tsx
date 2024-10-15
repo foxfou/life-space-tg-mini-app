@@ -9,7 +9,7 @@ export const OfferPreviewCard = (props: OfferPreviewCardProps) => {
     const {item} = props
 
     const images = [
-        '1.jpg',
+        '1.jpg', '2.jpg', '3.jpg',
     ]
 
     return (
