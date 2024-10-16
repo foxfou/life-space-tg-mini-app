@@ -1,24 +1,24 @@
 import { OfferData } from '@/scopes/App-Offers/services/offers'
-import { OfferPreviewCard } from '@/scopes/App-Offers/components/OfferPreviewCard/OfferPreviewCard'
+import { OffersPreviewCard } from '@/scopes/App-Offers/components/OffersPreviewCard/OffersPreviewCard'
 import { Dialog, DialogContent, DialogTrigger } from '@/components/common/dialog'
-import { OfferDetailCard } from '@/scopes/App-Offers/components/OfferDetailCard/OfferDetailCard'
+import { OffersDetailCard } from '@/scopes/App-Offers/components/OffersDetailCard/OffersDetailCard'
 
 export type OffersProps = {
     item: OfferData
 }
 
-export const Offer = (props: OffersProps) => {
+export const Offers = (props: OffersProps) => {
     const {item} = props
 
     return (
         <Dialog>
             <DialogTrigger asChild>
                 <button className="whitespace-nowrap w-full text-left">
-                    <OfferPreviewCard item={item} />
+                    <OffersPreviewCard item={item} />
                 </button>
             </DialogTrigger>
             <DialogContent className="overflow-y-scroll h-full w-full">
-                <OfferDetailCard item={item} />
+                <OffersDetailCard item={item} />
             </DialogContent>
         </Dialog>
     )

@@ -5,7 +5,7 @@ import {Card} from '@/components/common/card'
 export type OfferPreviewCardProps = {
     item: OfferData
 }
-export const OfferPreviewCard = (props: OfferPreviewCardProps) => {
+export const OffersPreviewCard = (props: OfferPreviewCardProps) => {
     const {item} = props
 
     const images = [
@@ -36,7 +36,7 @@ export const OfferPreviewCard = (props: OfferPreviewCardProps) => {
 
                     <div className="text-sm">
                         {item.bedroom_count}
-                        <span>-комн. кв.</span>
+                        <span>-комн</span>
                     </div>
 
                     <div className="text-sm before:content-['•'] before:mx-2">

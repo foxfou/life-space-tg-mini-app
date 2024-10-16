@@ -1,5 +1,5 @@
 import {useLoaderData} from '@remix-run/react'
-import {Offer} from '@/scopes/App-Offers/leaves/Offer/Offer'
+import {Offers} from '@/scopes/App-Offers/leaves/Offers/Offers'
 import { type clientLoader } from '@/scopes/App-Search/leaves/Search/Search.loader'
 
 export const Search = () => {
@@ -22,7 +22,7 @@ export const Search = () => {
                 <div className="text-2xl font-bold mb-8">Новые предложения</div>
 
                 {data.map((item) => (
-                    <Offer key={item.id} item={item} />
+                    <Offers key={item.id} item={item} />
                 ))}
 
             </div>
