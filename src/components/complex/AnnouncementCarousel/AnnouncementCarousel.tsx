@@ -6,7 +6,7 @@ import {Carousel, CarouselApi, CarouselContent, CarouselItem} from '@/components
 import {ImageOffIcon} from 'lucide-react'
 
 export type AnnouncementCarouselProps = {
-    images?: Array<string>
+    images: Array<string> | null
     size: 'sm' | 'lg'
     className?: string
 }
@@ -52,7 +52,7 @@ export const AnnouncementCarousel = (props: AnnouncementCarouselProps) => {
                             <div className="bg-accent p-0">
                                 <AspectRatio ratio={size === 'sm' ? 4 / 3 : 3 / 4}>
                                     <div className="flex items-center justify-center w-full h-full">
-                                        <img src={`./images/123/${images[0]}`} className="object-cover" alt=""/>
+                                        <img src={images[0]} className="object-cover" alt=""/>
                                     </div>
                                 </AspectRatio>
                             </div>
@@ -67,7 +67,7 @@ export const AnnouncementCarousel = (props: AnnouncementCarouselProps) => {
                                                 <Card className="!rounded-none">
                                                     <AspectRatio ratio={size === 'sm' ? 4 / 3 : 3 / 4} className="bg-accent flex justify-center">
                                                         <CardContent className="aspect-square p-0 flex items-center justify-center w-full h-full">
-                                                            <img src={`./images/123/${image}`} className="object-cover" alt=""/>
+                                                            <img src={image} className="object-cover" alt=""/>
                                                         </CardContent>
                                                     </AspectRatio>
                                                 </Card>

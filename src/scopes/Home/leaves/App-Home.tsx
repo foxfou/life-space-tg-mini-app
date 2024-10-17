@@ -1,5 +1,5 @@
-import {NavLink} from 'react-router-dom'
-import {Button} from '@/components/common/button'
+import { NavLink } from 'react-router-dom'
+import { Button } from '@/components/common/button'
 
 export const Home = () => {
 
@@ -24,7 +24,7 @@ export const Home = () => {
 
             <main className="flex justify-center mx-auto">
                 <Button className="" size="lg">
-                    <NavLink to="/search">
+                    <NavLink to="/offers">
                         Найти жилье
                     </NavLink>
                 </Button>

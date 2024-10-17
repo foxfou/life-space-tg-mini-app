@@ -1,0 +1,1 @@
+export { FileUpload as default } from '@/scopes/Admin-Offer-FileUpload/leaves/FileUpload/FileUpload'

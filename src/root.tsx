@@ -6,6 +6,8 @@ import {
     ScrollRestoration,
 } from '@remix-run/react'
 import './tailwind.css'
+import 'react-toastify/dist/ReactToastify.css'
+import { ToastContainer } from 'react-toastify'
 
 export function Layout({children}: { children: React.ReactNode }) {
     return (
@@ -19,8 +21,9 @@ export function Layout({children}: { children: React.ReactNode }) {
         </head>
         <body>
         {children}
-        <ScrollRestoration/>
+        {/*<ScrollRestoration/>*/}
         <Scripts/>
+        <ToastContainer />
         </body>
         </html>
     )

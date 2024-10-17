@@ -1,21 +1,17 @@
-import {AnnouncementCarousel} from '@/components/complex/AnnouncementCarousel/AnnouncementCarousel'
-import {OfferData} from '@/scopes/App-Offers/services/offers'
-import {Card} from '@/components/common/card'
+import { AnnouncementCarousel } from '@/components/complex/AnnouncementCarousel/AnnouncementCarousel'
+import { OffersData } from '@/scopes/App-Offers/services/offers'
+import { Card } from '@/components/common/card'
 
 export type OfferPreviewCardProps = {
-    item: OfferData
+    item: OffersData
 }
 export const OffersPreviewCard = (props: OfferPreviewCardProps) => {
     const {item} = props
 
-    const images = [
-        '1.jpg', '2.jpg', '3.jpg',
-    ]
-
     return (
         <Card className="bg-card">
 
-            <AnnouncementCarousel images={images} size="sm"/>
+            <AnnouncementCarousel images={item.photo_urls} size="sm"/>
 
             <div className="px-4 py-2">
 
